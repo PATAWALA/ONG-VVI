@@ -1,39 +1,38 @@
 import Link from "next/link";
-import { Heart, Mail, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-export default function Footer() {
+const Hero = () => {
   return (
-    <footer className="bg-primary-dark text-white pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
-              <Heart className="w-6 h-6 text-primary-dark" />
-            </div>
-            <span className="text-xl font-bold font-display">VVI</span>
+    <section className="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-pure-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex-1 space-y-6 text-center lg:text-left">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            Autonomisons les femmes, <br />
+            <span className="text-secondary">construisons l’avenir</span>
+          </h1>
+          <p className="max-w-xl text-lg text-white/90">
+            VVI accompagne les filles-mères et les orphelins au Bénin avec des formations, des soins et un soutien durable.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Link href="/faire-un-don" className="bg-secondary text-primary-dark font-bold px-8 py-4 rounded-full hover:bg-secondary-dark transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+              Faire un don <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link href="/notre-action" className="border-2 border-pure-white/40 text-pure-white font-semibold px-8 py-4 rounded-full hover:bg-pure-white/10 transition">
+              Découvrir notre impact
+            </Link>
           </div>
-          <p className="text-white/70 text-sm">Vision et Volonté d’Impact – ONG béninoise pour l’autonomisation des femmes, filles-mères et le soutien aux orphelins.</p>
+          <div className="pt-4 flex justify-center lg:justify-start gap-8 text-sm font-medium">
+            <div><span className="text-secondary font-bold text-2xl">50+</span><br />femmes formées</div>
+            <div><span className="text-secondary font-bold text-2xl">120+</span><br />orphelins soutenus</div>
+          </div>
         </div>
-        <div>
-          <h3 className="font-bold text-lg mb-3">Liens rapides</h3>
-          <ul className="space-y-2 text-sm text-white/70">
-            <li><Link href="/notre-action" className="hover:text-secondary transition">Notre action</Link></li>
-            <li><Link href="/actualites" className="hover:text-secondary transition">Actualités</Link></li>
-            <li><Link href="/rapports" className="hover:text-secondary transition">Rapports</Link></li>
-            <li><Link href="/faire-un-don" className="hover:text-secondary transition">Faire un don</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="font-bold text-lg mb-3">Contact</h3>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-secondary" />Zinvié, Abomey-Calavi, Bénin</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-secondary" />contact@vvi-ong.org</li>
-          </ul>
+        <div className="flex-1 max-w-md lg:max-w-none">
+          <img src="/images/hero-women.jpg" alt="Femmes béninoises en formation" className="rounded-2xl shadow-2xl object-cover w-full aspect-[4/3] border-4 border-pure-white/20" />
         </div>
       </div>
-      <div className="border-t border-white/20 mt-8 pt-6 text-center text-xs text-white/50">
-        © {new Date().getFullYear()} ONG VVI. Tous droits réservés.
-      </div>
-    </footer>
+    </section>
   );
-}
+};
+
+export default Hero;
