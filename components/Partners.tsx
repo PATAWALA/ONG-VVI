@@ -1,33 +1,11 @@
-// components/Partners.tsx
-import Image from "next/image";
+"use client";
 
-// Tableau de partenaires fictifs (à remplacer par les vrais)
 const partners = [
-  {
-    name: "Union Européenne",
-    logoUrl: "/images/partners/ue.png", // si l'image existe, elle sera affichée
-    fallback: "UE",
-  },
-  {
-    name: "UNICEF",
-    logoUrl: "/images/partners/unicef.png",
-    fallback: "UNICEF",
-  },
-  {
-    name: "Gouvernement du Bénin",
-    logoUrl: "/images/partners/gvt-benin.png",
-    fallback: "GB",
-  },
-  {
-    name: "Ecobank",
-    logoUrl: "/images/partners/ecobank.png",
-    fallback: "ECOBANK",
-  },
-  {
-    name: "Fondation MTN",
-    logoUrl: "/images/partners/mtn.png",
-    fallback: "MTN",
-  },
+  { name: "Union Européenne", initials: "UE" },
+  { name: "UNICEF", initials: "UNICEF" },
+  { name: "Gouvernement du Bénin", initials: "GB" },
+  { name: "Ecobank", initials: "ECOBANK" },
+  { name: "Fondation MTN", initials: "MTN" },
 ];
 
 export default function Partners() {
@@ -47,21 +25,10 @@ export default function Partners() {
               key={idx}
               className="group flex flex-col items-center gap-3 hover:scale-105 transition-transform"
             >
-              {/* Logos ou fallback */}
-              {partner.logoUrl ? (
-                <div className="w-24 h-24 relative rounded-xl overflow-hidden shadow-sm border border-primary/10 bg-white p-2">
-                  <Image
-                    src={partner.logoUrl}
-                    alt={partner.name}
-                    fill
-                    className="object-contain p-1"
-                  />
-                </div>
-              ) : (
-                <div className="w-24 h-24 rounded-xl bg-primary-light border border-primary/10 flex items-center justify-center text-primary font-bold text-lg shadow-sm">
-                  {partner.fallback}
-                </div>
-              )}
+              {/* Avatar avec initiales */}
+              <div className="w-24 h-24 rounded-xl bg-primary-light border border-primary/10 flex items-center justify-center text-primary font-bold text-xl shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                {partner.initials}
+              </div>
               <span className="text-sm text-gray-700 font-medium group-hover:text-primary transition-colors">
                 {partner.name}
               </span>
@@ -70,7 +37,13 @@ export default function Partners() {
         </div>
 
         <p className="mt-12 text-sm text-gray-muted italic">
-          Vous souhaitez devenir partenaire ? <a href="mailto:contact@vvi-ong.org" className="text-primary font-semibold underline">Contactez-nous</a>
+          Vous souhaitez devenir partenaire ?{" "}
+          <a
+            href="mailto:contact@vvi-ong.org"
+            className="text-primary font-semibold underline"
+          >
+            Contactez-nous
+          </a>
         </p>
       </div>
     </section>
