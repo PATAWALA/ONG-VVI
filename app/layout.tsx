@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -16,17 +18,15 @@ export const metadata: Metadata = {
     "Vision et Volonté d’Impact (VVI) agit pour les femmes, les filles-mères et les orphelins au Bénin. Formations, santé, éducation.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <Partners />
         <Footer />
+        <ChatWidget />   {/* ← Chat fixe en bas à droite */}
       </body>
     </html>
   );
