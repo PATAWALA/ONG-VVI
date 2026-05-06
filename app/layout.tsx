@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 
@@ -24,7 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Partners />
         <Footer />
         <ChatWidget />   {/* ← Chat fixe en bas à droite */}
       </body>
