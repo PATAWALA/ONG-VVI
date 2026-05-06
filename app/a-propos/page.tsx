@@ -3,7 +3,7 @@
 export default function AboutPage() {
   return (
     <main>
-      {/* ===== HERO avec logo couvrant tout le fond ===== */}
+      {/* ===== HERO avec logo en filigrane ===== */}
       <section className="relative bg-primary text-white py-20 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10 bg-center bg-no-repeat"
@@ -47,11 +47,15 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
             <h3 className="font-display text-xl font-bold text-primary mb-3">Vision</h3>
-            <p className="text-gray-muted">Être le plus grand accélérateur de développement communautaire, à travers la performance de ses actions et de ses équipes.</p>
+            <p className="text-gray-muted">
+              Être le plus grand accélérateur de développement communautaire, à travers la performance de ses actions et de ses équipes.
+            </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
             <h3 className="font-display text-xl font-bold text-primary mb-3">Mission</h3>
-            <p className="text-gray-muted">Fournir aux populations vulnérables, organisations et entreprises des solutions intégrées destinées à l’amélioration continue des situations communautaires.</p>
+            <p className="text-gray-muted">
+              Fournir aux populations vulnérables, organisations et entreprises des solutions intégrées destinées à l’amélioration continue des situations communautaires.
+            </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-primary/10">
             <h3 className="font-display text-xl font-bold text-primary mb-3">Objectifs</h3>
@@ -64,47 +68,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== ORGANIGRAMME AVEC FLÈCHES ===== */}
+      {/* ===== ORGANIGRAMME AMÉLIORÉ ===== */}
       <section className="py-16 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl font-bold text-primary mb-12">Notre organisation</h2>
 
-          {/* Niveau 1 */}
+          {/* Conseil Administration */}
           <div className="flex justify-center mb-6">
             <OrgCard
               image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
               title="Conseil d'Administration"
-              role="Orientation stratégique et contrôle"
+              description="Définit la stratégie et contrôle la gestion"
             />
           </div>
           <ArrowDown />
 
-          {/* Niveau 2 */}
+          {/* Directeur Exécutif */}
           <div className="flex justify-center mb-6">
             <OrgCard
               image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
               title="Directeur Exécutif"
-              role="Coordination générale"
+              description="Pilote les projets et coordonne les équipes"
             />
           </div>
           <ArrowDown />
 
-          {/* Niveau 3 */}
+          {/* Niveau intermédiaire : deux postes côte à côte */}
           <div className="flex flex-col sm:flex-row justify-center gap-8 mb-6">
             <OrgCard
               image="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
               title="Secrétaire-Comptable"
-              role="Administration et finances"
+              description="Gère les finances et l'administration"
             />
             <OrgCard
               image="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=200&h=200&fit=crop&crop=face"
               title="Chargée de Projet"
-              role="Conduite des actions terrain"
+              description="Supervise les actions sur le terrain"
             />
           </div>
           <ArrowDown />
 
-          {/* Niveau 4 */}
+          {/* Animateurs */}
           <div className="flex flex-wrap justify-center gap-6">
             <AnimateurCard image="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" />
             <AnimateurCard image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" />
@@ -113,12 +117,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== EXPÉRIENCES (inchangé) ===== */}
+      {/* ===== NOS EXPÉRIENCES ===== */}
       <section className="py-16 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-primary text-center mb-12">Nos expériences</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* ... conservez vos trois cartes expériences ... */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-primary/10">
+              <h3 className="font-bold text-lg mb-2">Formation en leadership et entrepreneuriat féminin</h3>
+              <p className="text-gray-muted text-sm">
+                50 femmes de Wawata Todja formées, regroupées en coopératives, coaching.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-primary/10">
+              <h3 className="font-bold text-lg mb-2">Sensibilisation MST et hygiène</h3>
+              <p className="text-gray-muted text-sm">
+                Séances pour filles-mères sur les maladies sexuellement transmissibles et l’hygiène corporelle.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-primary/10">
+              <h3 className="font-bold text-lg mb-2">Don aux orphelins</h3>
+              <p className="text-gray-muted text-sm">
+                Vêtements et moments festifs pour 10 enfants orphelins du village.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -126,25 +147,29 @@ export default function AboutPage() {
   );
 }
 
-/* Flèche de liaison */
+// ---------- Composants réutilisables ----------
+
+/** Flèche de liaison hiérarchique */
 function ArrowDown() {
   return (
     <div className="flex flex-col items-center my-2">
-      <div className="w-0.5 h-6 bg-primary/40"></div>
+      {/* Ligne verticale */}
+      <div className="w-0.5 h-8 bg-primary/40"></div>
+      {/* Pointe de flèche */}
       <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-primary/40"></div>
     </div>
   );
 }
 
-/* Carte organisation */
+/** Carte d'un poste avec photo, titre, description courte */
 function OrgCard({
   image,
   title,
-  role,
+  description,
 }: {
   image: string;
   title: string;
-  role: string;
+  description: string;
 }) {
   return (
     <div className="bg-off-white rounded-2xl p-6 shadow-sm border border-primary/10 hover:shadow-md transition text-center w-56">
@@ -155,13 +180,13 @@ function OrgCard({
           className="w-full h-full object-cover rounded-full border-4 border-primary/30"
         />
       </div>
-      <h3 className="text-lg font-bold text-primary mb-1">{title}</h3>
-      <p className="text-sm text-secondary font-medium">{role}</p>
+      <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
+      <p className="text-sm text-gray-muted leading-relaxed">{description}</p>
     </div>
   );
 }
 
-/* Animateur miniature */
+/** Carte animateur simplifiée */
 function AnimateurCard({ image }: { image: string }) {
   return (
     <div className="flex flex-col items-center w-24">
