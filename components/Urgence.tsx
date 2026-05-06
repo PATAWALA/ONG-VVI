@@ -24,15 +24,18 @@ export default function UrgenceSection() {
   return (
     <section className="py-16 bg-gradient-to-b from-red-50 to-pure-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Titre */}
+        {/* Badge + Titre + Sous-texte */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <AlertTriangle className="w-4 h-4" />
             Il y a urgence
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Ils comptent sur vous
           </h2>
+          <p className="text-gray-muted text-lg max-w-2xl mx-auto">
+            Chaque jour, des enfants orphelins, des filles-mères et des femmes vulnérables luttent pour survivre. Votre soutien peut tout changer.
+          </p>
         </div>
 
         {/* Cartes images */}

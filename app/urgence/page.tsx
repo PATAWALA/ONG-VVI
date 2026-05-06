@@ -1,3 +1,4 @@
+// app/urgence/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Heart, Users, Baby, AlertTriangle } from "lucide-react";
@@ -8,7 +9,7 @@ export default function UrgencePage() {
       {/* Hero section avec image dure */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
         <Image
-          src="/images/urgence-hero.jpg" // Remplacez par une image choc (enfant seul, etc.)
+          src="/images/urgence-hero.jpg"
           alt="Enfant vulnérable"
           fill
           className="object-cover brightness-[0.4]"
@@ -21,7 +22,7 @@ export default function UrgencePage() {
             <span className="text-secondary">Maintenant.</span>
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Chaque jour, des milliers d’enfants orphelins, de filles-mères et de femmes vulnérables 
+            Chaque jour, des milliers d’enfants orphelins, de filles-mères et de femmes vulnérables
             luttent pour survivre. Votre indifférence est leur seule limite.
           </p>
           <Link
@@ -73,8 +74,42 @@ export default function UrgencePage() {
         </div>
       </section>
 
-      {/* Portraits émotionnels */}
+      {/* NOUVELLE SECTION : Visite aux enfants handicapés */}
       <section className="py-16 bg-off-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 lg:h-full rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/handicap.jpg"
+                alt="Visite de VVI à une école pour enfants handicapés"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary">
+                Aucun enfant laissé pour compte
+              </h2>
+              <p className="text-gray-muted leading-relaxed">
+                VVI a rendu visite à une école pour enfants en situation de handicap. 
+                Nous avons partagé des moments de joie, distribué des fournitures et 
+                réaffirmé notre engagement : le handicap ne doit jamais être une barrière 
+                à l’éducation et à la dignité. Ces enfants ont du potentiel, et nous 
+                sommes là pour les aider à le révéler.
+              </p>
+              <Link
+                href="/faire-un-don"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              >
+                Soutenir cette mission <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portraits émotionnels */}
+      <section className="py-16 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary text-center mb-12">
             Des visages, des combats
@@ -142,8 +177,7 @@ export default function UrgencePage() {
   );
 }
 
-/* Sous-composants internes */
-
+// ---- Sous-composants (inchangés) ----
 function StatCard({
   icon,
   number,
