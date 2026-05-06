@@ -1,5 +1,6 @@
 // app/page.tsx
 import Hero from "@/components/Hero";
+import Urgence from "@/components/Urgence";
 import Impact from "@/components/Impact";
 import Donation from "@/components/Donation";
 import LatestNews from "@/components/LatestNews";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Urgence />
       <Impact />
       <Donation />
       <LatestNews />

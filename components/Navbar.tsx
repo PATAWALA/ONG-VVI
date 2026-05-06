@@ -41,6 +41,9 @@ const Navbar = () => {
             >
               Impact
             </Link>
+            <Link href="/urgence" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              L'urgence
+            </Link>
             <Link
               href="/actualites"
               className="text-gray-700 hover:text-primary font-medium transition-colors"
