@@ -22,8 +22,8 @@ export default function UrgencePage() {
             <span className="text-secondary">Maintenant.</span>
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Chaque jour, des milliers d’enfants orphelins, de filles-mères et de femmes vulnérables
-            luttent pour survivre. Votre indifférence est leur seule limite.
+            Derrière chaque chiffre, une vie brisée. Des orphelins sans avenir, des mères abandonnées, 
+            des enfants que le monde oublie. Votre main peut réécrire leur histoire.
           </p>
           <Link
             href="/faire-un-don"
