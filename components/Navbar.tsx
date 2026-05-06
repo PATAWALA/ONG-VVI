@@ -152,6 +152,9 @@ const Navbar = () => {
             <Link href="/rapports" className="block text-gray-700 font-medium" onClick={() => setIsOpen(false)}>
               Rapports
             </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Contact
+            </Link>
             <Link
               href="/faire-un-don"
               className="block w-fit bg-secondary text-primary-dark px-6 py-2.5 rounded-full font-semibold"
